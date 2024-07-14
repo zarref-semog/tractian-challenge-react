@@ -1,0 +1,63 @@
+.asset-details {
+    border: 1px solid #D8DFE6;
+    width: 60%;
+    height: 600px;
+    border-radius: 3px;
+    margin: 0 auto; /* Centralizar a div .asset-details */
+    overflow: hidden; /* Para garantir que o conteúdo fique dentro dos limites */
+}
+
+.title h3 {
+    margin: 10px;
+}
+
+.asset-data {
+    margin: 20px;
+    width: 100%; /* Ajustar a largura para 100% dentro da .asset-details */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box; /* Para incluir as bordas e margens na largura total */
+}
+
+.asset-data img {
+    margin-right: 20px;
+    border: 2px solid #D8DFE6;
+    border-radius: 5px;
+    max-width: 400px; /* Limitar o tamanho da imagem */
+    height: auto; /* Manter a proporção da imagem */
+}
+
+.asset-side-info {
+    flex-grow: 1;
+}
+
+.asset-bottom-info {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.asset-bottom-info div {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.asset-bottom-info p {
+    text-align: left;
+}
+
+.asset-data div p {
+    margin: 20px 0;
+}
+
+.asset-text {
+    color: #88929C;
+}
+
+.asset-details > hr {
+    margin: 0 20px;
+    border: 1px solid #D8DFE6;
+}
