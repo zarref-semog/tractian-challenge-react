@@ -2,9 +2,9 @@ import React from 'react';
 import './CompanyButton.css';
 import Vector from '../../assets/images/vector.svg';
 
-function CompanyButton() {
+function CompanyButton({ name, action }) {
     return(
-        <button><img src={Vector} alt='icone' width='14px'/>Company</button>
+        <button className='company-button' onClick={action}><img src={Vector} alt='icone' width='14px'/>{name}</button>
     );
 }
 

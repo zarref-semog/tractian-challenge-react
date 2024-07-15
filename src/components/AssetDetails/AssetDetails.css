@@ -31,6 +31,7 @@
 
 .asset-side-info {
     flex-grow: 1;
+    margin-right: 40px;
 }
 
 .asset-bottom-info {
