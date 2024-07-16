@@ -8,6 +8,7 @@ const TreeProvider = ({ children }) => {
   
   const [tree, setTree] = useState([]);
   const [treeView, setTreeView] = useState([]);
+  const [company, setCompany] = useState('');
 
   useEffect(() => {
       async function fetchTree() {
@@ -15,6 +16,7 @@ const TreeProvider = ({ children }) => {
               const treeData = buildTree(await loadData());
               setTree(treeData);
               setTreeView(treeData[0].children);
+              setCompany(treeData[0].name);
           } catch (error) {
               console.log(error);
           }
@@ -24,7 +26,7 @@ const TreeProvider = ({ children }) => {
   }, []);
 
   return (
-    <TreeContext.Provider value={{ tree, treeView, setTreeView }}>
+    <TreeContext.Provider value={{ tree, treeView, setTreeView, company, setCompany }}>
       {children}
     </TreeContext.Provider>
   );

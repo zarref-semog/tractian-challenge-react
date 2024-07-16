@@ -65,6 +65,9 @@ function buildTree(data) {
             }
         }
 
+        console.log(components);
+
+
         // Build relationships
         for (let companyId in data) {
             if (companyId !== "companies") {

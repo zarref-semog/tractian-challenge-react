@@ -7,6 +7,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import Location from '../../assets/images/location.png';
 import Asset from '../../assets/images/asset.png';
 import Component from '../../assets/images/component.png';
+import { BsFillLightningChargeFill } from "react-icons/bs";
 
 function TreeNode({ node }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,7 @@ function TreeNode({ node }) {
                 </button>
             ) : <>&nbsp;&nbsp;&nbsp;&nbsp;</>}
             {renderIcon(node.image)}
-            <span>&nbsp; {node.name}</span>
+            <span>&nbsp; {node.name}{node?.sensorId === 'energy' ? <BsFillLightningChargeFill /> : <></>}</span>
             {isOpen && <TreeView data={node?.children} />}
         </div>
     );

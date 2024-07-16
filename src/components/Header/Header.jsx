@@ -6,7 +6,7 @@ import { TreeContext } from '../../provider/TreeProvider';
 
 
 function Header() {
-    const { tree, setTreeView } = useContext(TreeContext);
+    const { tree, setTreeView, setCompany } = useContext(TreeContext);
 
     return (
         <div className='header'>
@@ -14,7 +14,10 @@ function Header() {
                 <img className='logo' src={Logo} alt='logo' />
             </div>
             <div className='buttons'>
-                {tree.map((node) => <CompanyButton key={node.id} name={node.name} action={() => setTreeView(node.children)}/>)}
+                {tree.map((node) => <CompanyButton key={node.id} name={node.name} action={() => {
+                    setCompany(node.name);
+                    setTreeView(node.children);
+                }} />)}
             </div>
         </div>
     );
